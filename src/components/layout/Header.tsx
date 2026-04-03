@@ -46,9 +46,13 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-xl font-extrabold tracking-tight text-primary lg:text-2xl">
-            MOURA{" "}
-            <span className="text-accent">VEÍCULOS</span>
+          <span className="flex flex-col leading-none">
+            <span className="text-2xl font-extrabold tracking-tight text-primary lg:text-3xl">
+              Moura
+            </span>
+            <span className="text-xs font-medium tracking-widest text-primary-light lg:text-sm">
+              veículos
+            </span>
           </span>
         </Link>
 
@@ -108,8 +112,13 @@ export default function Header() {
           <div className="absolute right-0 top-0 flex h-full w-72 flex-col bg-white shadow-xl animate-in slide-in-from-right">
             {/* Close button */}
             <div className="flex items-center justify-between border-b border-border px-4 py-3">
-              <span className="text-lg font-extrabold text-primary">
-                MOURA <span className="text-accent">VEÍCULOS</span>
+              <span className="flex flex-col leading-none">
+                <span className="text-2xl font-extrabold tracking-tight text-primary lg:text-3xl">
+                  Moura
+                </span>
+                <span className="text-xs font-medium tracking-widest text-primary-light lg:text-sm">
+                  veículos
+                </span>
               </span>
               <button
                 type="button"

@@ -56,22 +56,7 @@ export default function SobrePage() {
           <div className="mx-auto mt-2 h-1 w-16 rounded-full bg-accent" />
           <div className="mt-8 space-y-4 text-base leading-relaxed text-muted-foreground">
             <p>
-              H\u00e1 mais de 20 anos, a Moura Ve\u00edculos atua no mercado automotivo de
-              Londrina com dedica\u00e7\u00e3o e compromisso. Localizada na Rua Santa
-              Catarina, no cora\u00e7\u00e3o da cidade, nos tornamos refer\u00eancia em
-              seminovos de qualidade na regi\u00e3o.
-            </p>
-            <p>
-              Nossa trajet\u00f3ria \u00e9 marcada pela transpar\u00eancia, pelo atendimento
-              personalizado e pela busca constante em oferecer os melhores
-              ve\u00edculos com as melhores condi\u00e7\u00f5es de pagamento. Cada cliente que
-              entra em nossa loja \u00e9 tratado como parte da fam\u00edlia Moura.
-            </p>
-            <p>
-              Ao longo dos anos, j\u00e1 realizamos o sonho do carro pr\u00f3prio de
-              milhares de fam\u00edlias em Londrina e regi\u00e3o. Nosso compromisso \u00e9
-              continuar oferecendo excel\u00eancia, seguran\u00e7a e confian\u00e7a em cada
-              negocia\u00e7\u00e3o.
+              Moura Ve\u00edculos atua no mercado de seminovos na regi\u00e3o de Londrina oferecendo sempre as melhores ofertas de seminovos para voc\u00ea. Trabalhamos somente com ve\u00edculos de proced\u00eancia que passam por um rigoroso controle de qualidade e checagem completa no hist\u00f3rico. Pensou em comprar seminovo em Londrina, pensou Moura Ve\u00edculos. Seu pr\u00f3ximo carro est\u00e1 aqui!
             </p>
           </div>
         </div>

@@ -8,6 +8,7 @@ import {
   Phone,
 } from 'lucide-react';
 import { generateWhatsAppLink, WHATSAPP_NUMBER, PHONE } from '@/lib/utils';
+import FinanciamentoForm from '@/components/financiamento/FinanciamentoForm';
 
 export const metadata: Metadata = {
   title: 'Financiamento | Moura Ve\u00edculos',
@@ -84,6 +85,9 @@ export default function FinanciamentoPage() {
           ))}
         </div>
       </section>
+
+      {/* Financing Simulation Form */}
+      <FinanciamentoForm />
 
       {/* CTA Section */}
       <section className="bg-muted py-16">

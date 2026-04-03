@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f0eb"/>
+      <stop offset="100%" stop-color="#e8e0d8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bg)"/>
+
+  <!-- Car silhouette with cloth drape -->
+  <g transform="translate(400, 260)">
+    <!-- Car body base shape -->
+    <ellipse cx="0" cy="30" rx="180" ry="50" fill="#c4a882" opacity="0.5"/>
+
+    <!-- Draped cloth shape covering car -->
+    <path d="
+      M-170,40
+      Q-175,0 -160,-30
+      Q-140,-70 -100,-90
+      Q-60,-108 -20,-112
+      Q0,-114 20,-112
+      Q80,-106 120,-80
+      Q150,-60 165,-30
+      Q178,0 175,40
+      Q170,55 150,58
+      Q80,65 0,65
+      Q-80,65 -150,58
+      Q-168,55 -170,40
+      Z
+    " fill="#c4a882" opacity="0.85"/>
+
+    <!-- Cloth wavy top edge highlight -->
+    <path d="
+      M-160,-30
+      Q-140,-70 -100,-90
+      Q-60,-108 -20,-112
+      Q0,-114 20,-112
+      Q80,-106 120,-80
+      Q150,-60 165,-30
+    " fill="none" stroke="#d4b892" stroke-width="3" opacity="0.7"/>
+
+    <!-- Subtle fold lines on cloth -->
+    <path d="M-80,-80 Q-60,-20 -70,50" fill="none" stroke="#b89a72" stroke-width="1.5" opacity="0.3"/>
+    <path d="M40,-95 Q30,-30 35,55" fill="none" stroke="#b89a72" stroke-width="1.5" opacity="0.3"/>
+    <path d="M130,-55 Q120,0 125,55" fill="none" stroke="#b89a72" stroke-width="1.5" opacity="0.3"/>
+
+    <!-- Wheels peeking out -->
+    <ellipse cx="-110" cy="58" rx="28" ry="12" fill="#a08060" opacity="0.4"/>
+    <ellipse cx="110" cy="58" rx="28" ry="12" fill="#a08060" opacity="0.4"/>
+  </g>
+
+  <!-- Main text -->
+  <text x="400" y="400" text-anchor="middle" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="36" font-weight="700" letter-spacing="6" fill="#8B7355">EM PREPARAÇÃO</text>
+
+  <!-- Decorative line -->
+  <line x1="280" y1="420" x2="520" y2="420" stroke="#c4a882" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Brand text -->
+  <text x="400" y="460" text-anchor="middle" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="18" font-weight="400" letter-spacing="3" fill="#b0a090">Moura Veículos</text>
+</svg>

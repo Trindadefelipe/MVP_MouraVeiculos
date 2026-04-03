@@ -1,11 +1,7 @@
 import type { Vehicle } from '../types';
 
-function img(seed: number, idx: number): string {
-  return `https://picsum.photos/seed/moura${seed}v${idx}/800/600`;
-}
-
-function images(seed: number, count = 5): string[] {
-  return Array.from({ length: count }, (_, i) => img(seed, i + 1));
+function images(_seed: number, count = 5): string[] {
+  return Array.from({ length: count }, () => '/images/em-preparacao.svg');
 }
 
 export const mockVehicles: Vehicle[] = [
