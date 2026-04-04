@@ -1,3 +1,4 @@
+import { SearchX } from 'lucide-react';
 import type { Vehicle } from '@/lib/types';
 import VehicleCard from './VehicleCard';
 
@@ -8,7 +9,11 @@ interface VehicleGridProps {
 export default function VehicleGrid({ vehicles }: VehicleGridProps) {
   if (vehicles.length === 0) {
     return (
-      <div className="flex flex-col items-center justify-center py-20 text-center">
+      <div
+        role="status"
+        className="flex flex-col items-center justify-center rounded-xl border border-border bg-card p-12 text-center"
+      >
+        <SearchX className="mb-4 h-12 w-12 text-muted-foreground" />
         <p className="text-lg font-semibold text-foreground">
           Nenhum veículo encontrado
         </p>

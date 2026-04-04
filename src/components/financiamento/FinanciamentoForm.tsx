@@ -44,7 +44,7 @@ export default function FinanciamentoForm() {
 
       <form
         onSubmit={handleSubmit}
-        className="mx-auto max-w-2xl rounded-xl border border-border bg-card p-8 shadow-sm"
+        className="mx-auto max-w-2xl rounded-xl border border-border bg-card p-4 sm:p-8 shadow-sm"
       >
         <div className="grid gap-6 sm:grid-cols-2">
           {/* Nome completo */}

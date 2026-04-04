@@ -78,7 +78,7 @@ function EstoqueContent() {
   return (
     <>
       {/* Hero header */}
-      <section className="bg-primary-dark py-12 text-white">
+      <section className="bg-primary-dark py-16 text-white">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="flex items-center gap-3">
             <Car className="h-8 w-8 text-accent" />

@@ -40,6 +40,7 @@ export default function VehicleFilters({
         </div>
         {hasActiveFilters && (
           <button
+            type="button"
             onClick={clearFilters}
             className="flex items-center gap-1 text-xs text-primary-light hover:underline"
           >
@@ -49,12 +50,13 @@ export default function VehicleFilters({
         )}
       </div>
 
-      <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+      <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8">
         {/* Brand */}
         <select
+          aria-label="Filtrar por marca"
           value={filters.brand ?? ''}
           onChange={(e) => update({ brand: e.target.value || undefined })}
-          className="rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground focus:border-primary-light focus:outline-none focus:ring-1 focus:ring-primary-light"
+          className="rounded-lg border border-border bg-background px-3 py-2.5 text-sm text-foreground focus:border-primary-light focus:outline-none focus:ring-1 focus:ring-primary-light"
         >
           <option value="">Todas as marcas</option>
           {brands.map((brand) => (
@@ -66,9 +68,10 @@ export default function VehicleFilters({
 
         {/* Fuel */}
         <select
+          aria-label="Filtrar por combustível"
           value={filters.fuel ?? ''}
           onChange={(e) => update({ fuel: e.target.value || undefined })}
-          className="rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground focus:border-primary-light focus:outline-none focus:ring-1 focus:ring-primary-light"
+          className="rounded-lg border border-border bg-background px-3 py-2.5 text-sm text-foreground focus:border-primary-light focus:outline-none focus:ring-1 focus:ring-primary-light"
         >
           <option value="">Combustível</option>
           <option value="Flex">Flex</option>
@@ -80,9 +83,10 @@ export default function VehicleFilters({
 
         {/* Transmission */}
         <select
+          aria-label="Filtrar por câmbio"
           value={filters.transmission ?? ''}
           onChange={(e) => update({ transmission: e.target.value || undefined })}
-          className="rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground focus:border-primary-light focus:outline-none focus:ring-1 focus:ring-primary-light"
+          className="rounded-lg border border-border bg-background px-3 py-2.5 text-sm text-foreground focus:border-primary-light focus:outline-none focus:ring-1 focus:ring-primary-light"
         >
           <option value="">Câmbio</option>
           <option value="Automático">Automático</option>
@@ -93,11 +97,12 @@ export default function VehicleFilters({
 
         {/* Year Min */}
         <select
+          aria-label="Ano mínimo"
           value={filters.yearMin ?? ''}
           onChange={(e) =>
             update({ yearMin: e.target.value ? Number(e.target.value) : undefined })
           }
-          className="rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground focus:border-primary-light focus:outline-none focus:ring-1 focus:ring-primary-light"
+          className="rounded-lg border border-border bg-background px-3 py-2.5 text-sm text-foreground focus:border-primary-light focus:outline-none focus:ring-1 focus:ring-primary-light"
         >
           <option value="">Ano mín.</option>
           {Array.from({ length: 10 }, (_, i) => 2026 - i).map((year) => (
@@ -107,13 +112,49 @@ export default function VehicleFilters({
           ))}
         </select>
 
+        {/* Year Max */}
+        <select
+          aria-label="Ano máximo"
+          value={filters.yearMax ?? ''}
+          onChange={(e) =>
+            update({ yearMax: e.target.value ? Number(e.target.value) : undefined })
+          }
+          className="rounded-lg border border-border bg-background px-3 py-2.5 text-sm text-foreground focus:border-primary-light focus:outline-none focus:ring-1 focus:ring-primary-light"
+        >
+          <option value="">Ano máx.</option>
+          {Array.from({ length: 10 }, (_, i) => 2026 - i).map((year) => (
+            <option key={year} value={year}>
+              {year}
+            </option>
+          ))}
+        </select>
+
+        {/* Price Min */}
+        <select
+          aria-label="Preço mínimo"
+          value={filters.priceMin ?? ''}
+          onChange={(e) =>
+            update({ priceMin: e.target.value ? Number(e.target.value) : undefined })
+          }
+          className="rounded-lg border border-border bg-background px-3 py-2.5 text-sm text-foreground focus:border-primary-light focus:outline-none focus:ring-1 focus:ring-primary-light"
+        >
+          <option value="">Preço mín.</option>
+          <option value={30000}>R$ 30.000</option>
+          <option value={50000}>R$ 50.000</option>
+          <option value={80000}>R$ 80.000</option>
+          <option value={100000}>R$ 100.000</option>
+          <option value={150000}>R$ 150.000</option>
+          <option value={200000}>R$ 200.000</option>
+        </select>
+
         {/* Price Max */}
         <select
+          aria-label="Preço máximo"
           value={filters.priceMax ?? ''}
           onChange={(e) =>
             update({ priceMax: e.target.value ? Number(e.target.value) : undefined })
           }
-          className="rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground focus:border-primary-light focus:outline-none focus:ring-1 focus:ring-primary-light"
+          className="rounded-lg border border-border bg-background px-3 py-2.5 text-sm text-foreground focus:border-primary-light focus:outline-none focus:ring-1 focus:ring-primary-light"
         >
           <option value="">Preço até</option>
           <option value={80000}>R$ 80.000</option>
@@ -126,9 +167,10 @@ export default function VehicleFilters({
 
         {/* Sort */}
         <select
+          aria-label="Ordenar por"
           value={filters.sortBy ?? 'price-asc'}
           onChange={(e) => update({ sortBy: e.target.value as Filters['sortBy'] })}
-          className="rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground focus:border-primary-light focus:outline-none focus:ring-1 focus:ring-primary-light"
+          className="rounded-lg border border-border bg-background px-3 py-2.5 text-sm text-foreground focus:border-primary-light focus:outline-none focus:ring-1 focus:ring-primary-light"
         >
           <option value="price-asc">Menor preço</option>
           <option value="price-desc">Maior preço</option>

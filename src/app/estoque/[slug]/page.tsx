@@ -70,7 +70,7 @@ export default async function VehicleDetailPage({ params }: PageProps) {
   return (
     <>
       {/* Breadcrumb */}
-      <nav className="border-b border-border bg-muted/50">
+      <nav aria-label="Breadcrumb" className="border-b border-border bg-muted/50">
         <div className="mx-auto flex max-w-7xl items-center gap-2 px-4 py-3 text-sm text-muted-foreground lg:px-8">
           <Link href="/" className="transition-colors hover:text-primary-light">
             In\u00edcio
@@ -97,6 +97,7 @@ export default async function VehicleDetailPage({ params }: PageProps) {
             Voltar ao estoque
           </Link>
           <button
+            type="button"
             className="inline-flex items-center gap-2 rounded-lg border border-border px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted"
             aria-label="Compartilhar"
           >
@@ -161,9 +162,9 @@ export default async function VehicleDetailPage({ params }: PageProps) {
           <div className="lg:col-span-1">
             <div className="sticky top-24 space-y-6 rounded-xl border border-border bg-card p-6 shadow-sm">
               <div className="hidden lg:block">
-                <h1 className="text-xl font-extrabold text-foreground">
+                <p className="text-xl font-extrabold text-foreground">
                   {vehicle.brand} {vehicle.model}
-                </h1>
+                </p>
                 <p className="mt-1 text-sm text-muted-foreground">
                   {vehicle.version}
                 </p>

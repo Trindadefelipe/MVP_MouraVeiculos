@@ -29,6 +29,16 @@ export default function Header() {
     setMobileOpen(false);
   }, [pathname]);
 
+  // Close mobile menu on Escape key
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMobileOpen(false);
+    };
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, [mobileOpen]);
+
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
@@ -57,7 +67,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav aria-label="Navegação principal" className="hidden items-center gap-1 md:flex">
           {navLinks.map((link) => {
             const isActive =
               link.href === "/"
@@ -101,7 +111,7 @@ export default function Header() {
 
       {/* Mobile overlay */}
       {mobileOpen && (
-        <div className="fixed inset-0 top-0 z-50 md:hidden">
+        <div role="dialog" aria-modal="true" className="fixed inset-0 top-0 z-50 md:hidden">
           {/* Backdrop */}
           <div
             className="absolute inset-0 bg-black/40"
@@ -109,7 +119,7 @@ export default function Header() {
           />
 
           {/* Slide-in panel */}
-          <div className="absolute right-0 top-0 flex h-full w-72 flex-col bg-white shadow-xl animate-in slide-in-from-right">
+          <div className="absolute right-0 top-0 flex h-full w-72 max-w-[85vw] flex-col bg-white shadow-xl animate-in slide-in-from-right">
             {/* Close button */}
             <div className="flex items-center justify-between border-b border-border px-4 py-3">
               <span className="flex flex-col leading-none">
@@ -131,7 +141,7 @@ export default function Header() {
             </div>
 
             {/* Links */}
-            <nav className="flex flex-1 flex-col gap-1 p-4">
+            <nav aria-label="Menu mobile" className="flex flex-1 flex-col gap-1 p-4">
               {navLinks.map((link) => {
                 const isActive =
                   link.href === "/"

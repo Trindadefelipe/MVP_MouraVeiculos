@@ -37,14 +37,14 @@ export default function VehicleGallery({ images, alt }: VehicleGalleryProps) {
           <>
             <button
               onClick={prev}
-              className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white backdrop-blur-sm transition-colors hover:bg-black/70"
+              className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-3 text-white backdrop-blur-sm transition-colors hover:bg-black/70"
               aria-label="Foto anterior"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
             <button
               onClick={next}
-              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white backdrop-blur-sm transition-colors hover:bg-black/70"
+              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-3 text-white backdrop-blur-sm transition-colors hover:bg-black/70"
               aria-label="Próxima foto"
             >
               <ChevronRight className="h-5 w-5" />
@@ -65,6 +65,7 @@ export default function VehicleGallery({ images, alt }: VehicleGalleryProps) {
             <button
               key={i}
               onClick={() => setCurrent(i)}
+              aria-label={`Ver foto ${i + 1}`}
               className={`relative h-16 w-24 shrink-0 overflow-hidden rounded-lg border-2 transition-all ${
                 i === current
                   ? 'border-primary-light ring-1 ring-primary-light'

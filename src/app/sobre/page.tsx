@@ -92,7 +92,7 @@ export default function SobrePage() {
       </section>
 
       {/* Numbers */}
-      <section className="py-16">
+      <section className="border-y border-border py-16">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="grid gap-8 sm:grid-cols-3">
             {numbers.map(({ icon: Icon, value, label }) => (

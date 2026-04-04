@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Phone, Clock, Mail } from "lucide-react";
+import { MapPin, Phone, Clock, MessageCircle } from "lucide-react";
 
 const quickLinks = [
   { href: "/", label: "Início" },
@@ -11,14 +11,19 @@ const quickLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-primary-dark text-white">
+    <footer role="contentinfo" className="bg-primary-dark text-white">
       <div className="mx-auto max-w-7xl px-4 py-12 lg:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Company info */}
           <div>
-            <h3 className="text-lg font-extrabold tracking-tight">
-              MOURA <span className="text-accent">VEÍCULOS</span>
-            </h3>
+            <div className="flex flex-col leading-none">
+              <span className="text-2xl font-extrabold tracking-tight text-white">
+                Moura
+              </span>
+              <span className="text-xs font-medium tracking-widest text-white/70">
+                veículos
+              </span>
+            </div>
             <p className="mt-3 text-sm leading-relaxed text-white/70">
               Há mais de 20 anos realizando o sonho do carro próprio em Londrina
               e região.
@@ -96,7 +101,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-white"
                 >
-                  <Mail className="h-4 w-4 shrink-0 text-accent" />
+                  <MessageCircle className="h-4 w-4 shrink-0 text-accent" />
                   WhatsApp
                 </a>
               </li>
@@ -126,7 +131,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 py-4 lg:px-8">
           <p className="text-center text-xs text-white/50">
-            &copy; 2026 Moura Veículos. Todos os direitos reservados.
+            &copy; {new Date().getFullYear()} Moura Veículos. Todos os direitos reservados.
           </p>
         </div>
       </div>

@@ -4,7 +4,7 @@ import type { Vehicle } from './types';
 
 export const WHATSAPP_NUMBER = '554333213007';
 export const PHONE = '(43) 3321-3007';
-export const ADDRESS = 'Av. Tiradentes, 980 - Centro, Londrina - PR, 86010-190';
+export const ADDRESS = 'Rua Santa Catarina, 491, Centro - Londrina/PR';
 export const BUSINESS_HOURS = {
   weekdays: '08:00 - 18:00',
   saturday: '08:00 - 13:00',
