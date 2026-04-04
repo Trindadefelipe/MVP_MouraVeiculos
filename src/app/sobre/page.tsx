@@ -3,33 +3,33 @@ import Link from 'next/link';
 import { Heart, Target, Users, MapPin, Calendar } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Sobre | Moura Ve\u00edculos',
+  title: 'Sobre | Moura Veículos',
   description:
-    'Conhe\u00e7a a hist\u00f3ria da Moura Ve\u00edculos. H\u00e1 mais de 20 anos realizando o sonho do carro pr\u00f3prio em Londrina e regi\u00e3o.',
+    'Conheça a história da Moura Veículos. Há mais de 20 anos realizando o sonho do carro próprio em Londrina e região.',
 };
 
 const values = [
   {
     icon: Heart,
-    title: 'Confian\u00e7a',
-    description: 'Mais de duas d\u00e9cadas de compromisso com nossos clientes',
+    title: 'Confiança',
+    description: 'Mais de duas décadas de compromisso com nossos clientes',
   },
   {
     icon: Target,
     title: 'Qualidade',
-    description: 'Ve\u00edculos selecionados e revisados para sua tranquilidade',
+    description: 'Veículos selecionados e revisados para sua tranquilidade',
   },
   {
     icon: Users,
     title: 'Atendimento',
-    description: 'Equipe dedicada a encontrar o ve\u00edculo ideal para voc\u00ea',
+    description: 'Equipe dedicada a encontrar o veículo ideal para você',
   },
 ];
 
 const numbers = [
   { icon: Calendar, value: '20+', label: 'anos de mercado' },
   { icon: Users, value: 'Milhares', label: 'de clientes satisfeitos' },
-  { icon: MapPin, value: 'Londrina', label: 'e regi\u00e3o' },
+  { icon: MapPin, value: 'Londrina', label: 'e região' },
 ];
 
 export default function SobrePage() {
@@ -39,10 +39,10 @@ export default function SobrePage() {
       <section className="bg-primary-dark py-16 text-white">
         <div className="mx-auto max-w-7xl px-4 text-center lg:px-8">
           <h1 className="text-3xl font-extrabold sm:text-4xl">
-            Sobre a Moura Ve\u00edculos
+            Sobre a Moura Veículos
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base text-white/70">
-            Tradi\u00e7\u00e3o e confian\u00e7a no mercado automotivo de Londrina
+            Tradição e confiança no mercado automotivo de Londrina
           </p>
         </div>
       </section>
@@ -51,12 +51,12 @@ export default function SobrePage() {
       <section className="mx-auto max-w-7xl px-4 py-16 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-2xl font-bold text-foreground">
-            Nossa Hist\u00f3ria
+            Nossa História
           </h2>
           <div className="mx-auto mt-2 h-1 w-16 rounded-full bg-accent" />
           <div className="mt-8 space-y-4 text-base leading-relaxed text-muted-foreground">
             <p>
-              Moura Ve\u00edculos atua no mercado de seminovos na regi\u00e3o de Londrina oferecendo sempre as melhores ofertas de seminovos para voc\u00ea. Trabalhamos somente com ve\u00edculos de proced\u00eancia que passam por um rigoroso controle de qualidade e checagem completa no hist\u00f3rico. Pensou em comprar seminovo em Londrina, pensou Moura Ve\u00edculos. Seu pr\u00f3ximo carro est\u00e1 aqui!
+              Moura Veículos atua no mercado de seminovos na região de Londrina oferecendo sempre as melhores ofertas de seminovos para você. Trabalhamos somente com veículos de procedência que passam por um rigoroso controle de qualidade e checagem completa no histórico. Pensou em comprar seminovo em Londrina, pensou Moura Veículos. Seu próximo carro está aqui!
             </p>
           </div>
         </div>
@@ -117,8 +117,8 @@ export default function SobrePage() {
             Venha nos conhecer!
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-white/70">
-            Estamos esperando sua visita. Venha tomar um caf\u00e9 conosco e
-            encontrar o ve\u00edculo dos seus sonhos.
+            Estamos esperando sua visita. Venha tomar um café conosco e
+            encontrar o veículo dos seus sonhos.
           </p>
           <Link
             href="/contato"

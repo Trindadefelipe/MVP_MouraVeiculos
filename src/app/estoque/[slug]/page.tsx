@@ -23,12 +23,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const vehicle = mockVehicles.find((v) => v.slug === slug);
 
   if (!vehicle) {
-    return { title: 'Ve\u00edculo n\u00e3o encontrado | Moura Ve\u00edculos' };
+    return { title: 'Veículo não encontrado | Moura Veículos' };
   }
 
   return {
-    title: `${vehicle.brand} ${vehicle.model} ${vehicle.year} | Moura Ve\u00edculos`,
-    description: `${vehicle.brand} ${vehicle.model} ${vehicle.version} - ${vehicle.year} - ${vehicle.fuel} - ${vehicle.transmission}. ${formatPrice(vehicle.promotionPrice ?? vehicle.price)}. Confira na Moura Ve\u00edculos em Londrina/PR.`,
+    title: `${vehicle.brand} ${vehicle.model} ${vehicle.year} | Moura Veículos`,
+    description: `${vehicle.brand} ${vehicle.model} ${vehicle.version} - ${vehicle.year} - ${vehicle.fuel} - ${vehicle.transmission}. ${formatPrice(vehicle.promotionPrice ?? vehicle.price)}. Confira na Moura Veículos em Londrina/PR.`,
   };
 }
 
@@ -40,10 +40,10 @@ export default async function VehicleDetailPage({ params }: PageProps) {
     return (
       <div className="flex min-h-[60vh] flex-col items-center justify-center px-4 text-center">
         <h1 className="text-3xl font-extrabold text-foreground">
-          Ve\u00edculo n\u00e3o encontrado
+          Veículo não encontrado
         </h1>
         <p className="mt-3 text-muted-foreground">
-          O ve\u00edculo que voc\u00ea procura n\u00e3o est\u00e1 mais dispon\u00edvel ou o link est\u00e1 incorreto.
+          O veículo que você procura não está mais disponível ou o link está incorreto.
         </p>
         <Link
           href="/estoque"
@@ -73,7 +73,7 @@ export default async function VehicleDetailPage({ params }: PageProps) {
       <nav aria-label="Breadcrumb" className="border-b border-border bg-muted/50">
         <div className="mx-auto flex max-w-7xl items-center gap-2 px-4 py-3 text-sm text-muted-foreground lg:px-8">
           <Link href="/" className="transition-colors hover:text-primary-light">
-            In\u00edcio
+            Início
           </Link>
           <ChevronRight className="h-3.5 w-3.5" />
           <Link href="/estoque" className="transition-colors hover:text-primary-light">
@@ -130,7 +130,7 @@ export default async function VehicleDetailPage({ params }: PageProps) {
             {vehicle.description && (
               <div className="rounded-xl border border-border bg-card p-6">
                 <h2 className="mb-3 text-lg font-bold text-foreground">
-                  Descri\u00e7\u00e3o
+                  Descrição
                 </h2>
                 <p className="text-sm leading-relaxed text-muted-foreground">
                   {vehicle.description}
@@ -141,7 +141,7 @@ export default async function VehicleDetailPage({ params }: PageProps) {
             {vehicle.accessories.length > 0 && (
               <div className="rounded-xl border border-border bg-card p-6">
                 <h2 className="mb-4 text-lg font-bold text-foreground">
-                  Acess\u00f3rios e Equipamentos
+                  Acessórios e Equipamentos
                 </h2>
                 <div className="flex flex-wrap gap-2">
                   {vehicle.accessories.map((acc) => (
@@ -184,7 +184,7 @@ export default async function VehicleDetailPage({ params }: PageProps) {
               <div className="flex items-center gap-2 rounded-lg bg-success/10 px-4 py-2.5">
                 <ShieldCheck className="h-5 w-5 text-success" />
                 <span className="text-xs font-medium text-success">
-                  Ve\u00edculo revisado e com proced\u00eancia verificada
+                  Veículo revisado e com procedência verificada
                 </span>
               </div>
 
@@ -204,7 +204,7 @@ export default async function VehicleDetailPage({ params }: PageProps) {
         {similar.length > 0 && (
           <section className="mt-16">
             <h2 className="mb-6 text-xl font-bold text-foreground">
-              Ve\u00edculos Similares
+              Veículos Similares
             </h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {similar.map((v) => (

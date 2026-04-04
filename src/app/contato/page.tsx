@@ -11,21 +11,20 @@ import {
   generateWhatsAppLink,
   WHATSAPP_NUMBER,
   PHONE,
-  ADDRESS,
   BUSINESS_HOURS,
   SOCIAL_LINKS,
 } from '@/lib/utils';
 
 export const metadata: Metadata = {
-  title: 'Contato | Moura Ve\u00edculos',
+  title: 'Contato | Moura Veículos',
   description:
-    'Entre em contato com a Moura Ve\u00edculos. Visite nossa loja na Rua Santa Catarina, 491, Centro, Londrina/PR ou fale conosco pelo WhatsApp.',
+    'Entre em contato com a Moura Veículos. Visite nossa loja na Rua Santa Catarina, 491, Centro, Londrina/PR ou fale conosco pelo WhatsApp.',
 };
 
 export default function ContatoPage() {
   const whatsappUrl = generateWhatsAppLink(
     WHATSAPP_NUMBER,
-    'Ol\u00e1! Gostaria de mais informa\u00e7\u00f5es sobre os ve\u00edculos.',
+    'Olá! Gostaria de mais informações sobre os veículos.',
   );
 
   return (
@@ -37,7 +36,7 @@ export default function ContatoPage() {
             Entre em Contato
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base text-white/70">
-            Estamos prontos para atender voc\u00ea. Visite nossa loja ou entre em
+            Estamos prontos para atender você. Visite nossa loja ou entre em
             contato pelos canais abaixo.
           </p>
         </div>
@@ -54,7 +53,7 @@ export default function ContatoPage() {
                 <MapPin className="h-6 w-6" />
               </div>
               <div>
-                <h3 className="font-bold text-foreground">Endere\u00e7o</h3>
+                <h3 className="font-bold text-foreground">Endereço</h3>
                 <p className="mt-1 text-sm text-muted-foreground">
                   Rua Santa Catarina, 491
                   <br />
@@ -106,11 +105,11 @@ export default function ContatoPage() {
               </div>
               <div>
                 <h3 className="font-bold text-foreground">
-                  Hor\u00e1rio de Funcionamento
+                  Horário de Funcionamento
                 </h3>
                 <div className="mt-1 space-y-1 text-sm text-muted-foreground">
                   <p>Segunda a Sexta: {BUSINESS_HOURS.weekdays}</p>
-                  <p>S\u00e1bado: {BUSINESS_HOURS.saturday}</p>
+                  <p>Sábado: {BUSINESS_HOURS.saturday}</p>
                   <p>Domingo: {BUSINESS_HOURS.sunday}</p>
                 </div>
               </div>
@@ -156,7 +155,7 @@ export default function ContatoPage() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Localiza\u00e7\u00e3o Moura Ve\u00edculos"
+              title="Localização Moura Veículos"
             />
           </div>
         </div>
@@ -169,8 +168,8 @@ export default function ContatoPage() {
             Fale conosco pelo WhatsApp
           </h2>
           <p className="mt-3 text-muted-foreground">
-            Tire suas d\u00favidas, agende uma visita ou solicite mais informa\u00e7\u00f5es
-            sobre nossos ve\u00edculos.
+            Tire suas dúvidas, agende uma visita ou solicite mais informações
+            sobre nossos veículos.
           </p>
           <a
             href={whatsappUrl}

@@ -11,30 +11,30 @@ import { generateWhatsAppLink, WHATSAPP_NUMBER, PHONE } from '@/lib/utils';
 import FinanciamentoForm from '@/components/financiamento/FinanciamentoForm';
 
 export const metadata: Metadata = {
-  title: 'Financiamento | Moura Ve\u00edculos',
+  title: 'Financiamento | Moura Veículos',
   description:
-    'Simule seu financiamento com as melhores taxas do mercado. Aprova\u00e7\u00e3o r\u00e1pida e condi\u00e7\u00f5es especiais na Moura Ve\u00edculos em Londrina/PR.',
+    'Simule seu financiamento com as melhores taxas do mercado. Aprovação rápida e condições especiais na Moura Veículos em Londrina/PR.',
 };
 
 const benefits = [
   {
     icon: Clock,
-    title: 'Aprova\u00e7\u00e3o R\u00e1pida',
-    description: 'Resposta em at\u00e9 24 horas',
+    title: 'Aprovação Rápida',
+    description: 'Resposta em até 24 horas',
   },
   {
     icon: Percent,
     title: 'Melhores Taxas',
-    description: 'Taxas a partir de 0,99% ao m\u00eas',
+    description: 'Taxas a partir de 0,99% ao mês',
   },
   {
     icon: Banknote,
     title: 'Entrada Facilitada',
-    description: 'Condi\u00e7\u00f5es especiais de entrada',
+    description: 'Condições especiais de entrada',
   },
   {
     icon: ShieldCheck,
-    title: 'Seguran\u00e7a',
+    title: 'Segurança',
     description: 'Processo 100% seguro e transparente',
   },
 ];
@@ -42,7 +42,7 @@ const benefits = [
 export default function FinanciamentoPage() {
   const whatsappUrl = generateWhatsAppLink(
     WHATSAPP_NUMBER,
-    'Ol\u00e1! Gostaria de simular um financiamento.',
+    'Olá! Gostaria de simular um financiamento.',
   );
 
   return (
@@ -51,12 +51,12 @@ export default function FinanciamentoPage() {
       <section className="bg-primary-dark py-16 text-white">
         <div className="mx-auto max-w-7xl px-4 text-center lg:px-8">
           <h1 className="text-3xl font-extrabold sm:text-4xl">
-            Financie seu Ve\u00edculo
+            Financie seu Veículo
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base text-white/70">
-            Na Moura Ve\u00edculos, facilitamos a conquista do seu carro. Trabalhamos
+            Na Moura Veículos, facilitamos a conquista do seu carro. Trabalhamos
             com os principais bancos e financeiras para oferecer as melhores
-            condi\u00e7\u00f5es do mercado.
+            condições do mercado.
           </p>
         </div>
       </section>
@@ -96,8 +96,8 @@ export default function FinanciamentoPage() {
             Entre em contato para simular seu financiamento
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-            Nossa equipe est\u00e1 pronta para encontrar a melhor condi\u00e7\u00e3o de
-            pagamento para voc\u00ea. Simule agora mesmo pelo WhatsApp!
+            Nossa equipe está pronta para encontrar a melhor condição de
+            pagamento para você. Simule agora mesmo pelo WhatsApp!
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -121,8 +121,8 @@ export default function FinanciamentoPage() {
           </div>
 
           <p className="mt-6 text-xs text-muted-foreground">
-            * Financiamento sujeito a an\u00e1lise de cr\u00e9dito. Taxas e condi\u00e7\u00f5es
-            podem variar de acordo com o perfil do cliente e o ve\u00edculo
+            * Financiamento sujeito a análise de crédito. Taxas e condições
+            podem variar de acordo com o perfil do cliente e o veículo
             escolhido.
           </p>
         </div>

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import {
   Car,
@@ -64,15 +65,17 @@ export default function Home() {
   return (
     <>
       {/* ── 1. Hero Banner ──────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light">
-        {/* Decorative background elements */}
-        <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          <Car className="absolute -right-10 top-10 h-64 w-64 rotate-12 text-white/[0.04]" />
-          <Car className="absolute -left-8 bottom-10 h-48 w-48 -rotate-12 text-white/[0.04]" />
-          <Car className="absolute right-1/3 bottom-1/4 h-36 w-36 rotate-6 text-white/[0.03]" />
-          <div className="absolute -left-20 top-1/2 h-80 w-80 rounded-full bg-white/[0.03]" />
-          <div className="absolute -bottom-20 right-1/4 h-60 w-60 rounded-full bg-accent/[0.06]" />
-        </div>
+      <section className="relative overflow-hidden">
+        {/* Background image */}
+        <Image
+          src="/images/T-Cross_Hero.jpg"
+          alt="T-Cross Hero"
+          fill
+          priority
+          className="object-cover"
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/60" />
 
         <div className="relative mx-auto flex min-h-[70vh] max-w-7xl flex-col items-center justify-center px-4 py-20 text-center sm:py-28 lg:px-8">
           <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium text-white/90 backdrop-blur-sm">
